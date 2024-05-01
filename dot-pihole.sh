@@ -42,6 +42,7 @@ echo "Email : $SSL_CERT_EMAIL"
 echo "Domain : $DNS_DOMAIN_NAME"
 echo "=============================="
 echo ""
+
 sudo certbot  certonly --webroot -w "${WEB_ROOT}" --preferred-challenges http -m "$SSL_CERT_EMAIL" -d "$DNS_DOMAIN_NAME" -n --agree-tos --no-eff-email
 
 #
